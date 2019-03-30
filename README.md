@@ -1,7 +1,7 @@
 # paymentServer
 digilira Payment Application
 
-Get Started
+## Get Started
 
 Overview
 
