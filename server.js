@@ -13,9 +13,9 @@ Base58 = require("base-58");
 assetList = [];
 
 var options = {
-    key: fs.readFileSync('...'),
-    cert: fs.readFileSync('...'),
-    ca: fs.readFileSync('...')
+    //key: fs.readFileSync('...'),
+    //cert: fs.readFileSync('...'),
+    //ca: fs.readFileSync('...')
 };
 
 for (var key in config1.accepted) {
