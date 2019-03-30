@@ -78,10 +78,11 @@ Next you need to change http server to https;
       var server = https.createServer(options, app);
 
 4. Run respectively;
-
+```
 npm install
-node server.js
 
+node server.js
+```
 5. 
 
 
