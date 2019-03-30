@@ -60,14 +60,14 @@ Step by Step Accepting Crypto Payments
 2.1.2. Change accepted crypto currencies which you want to accept. You can add or remove any crypto currencies created on Waves Blockchain. You must write Asset identifier and Asset ID.
 
 3. Configure server.js
-	Server.js supports SSL connections. To activate SSL connections add following lines to options in server.js and edit SSL certificate locations.
 
-      var options = {
-         key: fs.readFileSync('…'),
-         cert: fs.readFileSync('…'),
-         ca: fs.readFileSync('…') 
-      };
+Server.js supports SSL connections. To activate SSL connections add following lines to options in server.js and edit SSL certificate locations.
 
+var options = {
+  key: fs.readFileSync('…'),
+  cert: fs.readFileSync('…'),
+  ca: fs.readFileSync('…') 
+}
 
 Next you need to change http server to https;
 
