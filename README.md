@@ -86,7 +86,7 @@ node server.js
 5. You should see following on terminal window;
 ```
 socket
-server up and running at 8002 port
+server up and running at 8080 port
 ```
 
 
