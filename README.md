@@ -63,11 +63,13 @@ Step by Step Accepting Crypto Payments
 
 Server.js supports SSL connections. To activate SSL connections add following lines to options in server.js and edit SSL certificate locations.
 
+```
 var options = {
   key: fs.readFileSync('…'),
   cert: fs.readFileSync('…'),
   ca: fs.readFileSync('…') 
 }
+```
 
 Next you need to change http server to https;
 
