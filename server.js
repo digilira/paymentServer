@@ -28,7 +28,7 @@ var server = http.createServer(options, app);
 const io = socket(server);
 
 server.listen(8080, function () {
-    console.log('server up and running at 8002 port');
+    console.log('server up and running at 8080 port');
 
 });
 
