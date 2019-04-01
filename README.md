@@ -7,7 +7,7 @@ Overview
 
 This page introduces you to the things you’ll need to get started to accept crypto payments with WAVES and WAVES Assets.
 
-You’ll be Able to
+You’ll be able to
 
 -	The owner of an internet store writes data to Waves Blockchain as data transactions to prevent fraud and make payment application decentralized. Payment application checks the prices from the Waves Blockchain thus making application more secure against cheats on false price payment attempts.
 -	Payment application checks prices from the Waves DEX with the current bids. This makes crypto calculations more accurately. If there are not enough bids for that pair then payment application prevents vendor in case of low liquidity situations.
