@@ -3,7 +3,7 @@ digilira Payment Application
 
 ## Get Started
 
-Overview
+### Overview
 
 This page introduces you to the things you’ll need to get started to accept crypto payments with WAVES and WAVES Assets.
 
