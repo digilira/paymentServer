@@ -18,7 +18,7 @@ You’ll be able to
 -	Payment application can confirm the transactions made from waves keeper and also application has ability to scan blockchain to confirm transactions made from mobile or desktop wallet.
 -	Vendor can set a payment time deadline to prevent from price volatility. 
 
-Things You’ll Need
+### Things You’ll Need
 
 NodeJS (First, access Node.js website and click the green "Download" button for your OS)
 
@@ -26,14 +26,14 @@ Waves Keeper
 
 Step by Step Accepting Crypto Payments
 
-1. Create a “payment” folder on your server
+## 1. Create a “payment” folder on your server
 
 2. Download these 3 files from GitHub:
 -	server.js
 -	config.Js
 -	package.json
 
-2.1. Configure config.js :
+### 2.1. Configure config.js :
 
 
     address: {
@@ -55,11 +55,11 @@ Step by Step Accepting Crypto Payments
     }, 
  
 
-2.1.1. Change wallet address with your Waves Address which you will accept crypto payments. This account must be the same account you added to Waves Keeper and must have Waves Balance (You will use data transactions to write data on Waves Blockchain).
+#### 2.1.1. Change wallet address with your Waves Address which you will accept crypto payments. This account must be the same account you added to Waves Keeper and must have Waves Balance (You will use data transactions to write data on Waves Blockchain).
 
-2.1.2. Change accepted crypto currencies which you want to accept. You can add or remove any crypto currencies created on Waves Blockchain. You must write Asset identifier and Asset ID.
+#### 2.1.2. Change accepted crypto currencies which you want to accept. You can add or remove any crypto currencies created on Waves Blockchain. You must write Asset identifier and Asset ID.
 
-3. Configure server.js
+## 3. Configure server.js
 
 Server.js supports SSL connections. To activate SSL connections add following lines to options in server.js and edit SSL certificate locations.
 
@@ -77,13 +77,13 @@ Next you need to change http server to https;
       to 
       var server = https.createServer(options, app);
 
-4. Run respectively;
+## 4. Run respectively;
 ```
 npm install
 
 node server.js
 ```
-5. You should see following on terminal window;
+## 5. You should see following on terminal window;
 ```
 socket
 server up and running at 8080 port
