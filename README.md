@@ -55,9 +55,11 @@ Step by Step Accepting Crypto Payments
     }, 
  
 
-#### 2.1.1. Change wallet address with your Waves Address which you will accept crypto payments. This account must be the same account you added to Waves Keeper and must have Waves Balance (You will use data transactions to write data on Waves Blockchain).
+#### 2.1.1. 
+Change wallet address with your Waves Address which you will accept crypto payments. This account must be the same account you added to Waves Keeper and must have Waves Balance (You will use data transactions to write data on Waves Blockchain).
 
-#### 2.1.2. Change accepted crypto currencies which you want to accept. You can add or remove any crypto currencies created on Waves Blockchain. You must write Asset identifier and Asset ID.
+#### 2.1.2. 
+Change accepted crypto currencies which you want to accept. You can add or remove any crypto currencies created on Waves Blockchain. You must write Asset identifier and Asset ID.
 
 ## 3. Configure server.js
 
