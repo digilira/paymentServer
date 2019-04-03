@@ -13,9 +13,9 @@ Base58 = require("base-58");
 assetList = [];
 
 var options = {
-    //key: fs.readFileSync('...'),
-    //cert: fs.readFileSync('...'),
-    //ca: fs.readFileSync('...')
+    //key: fs.readFileSync('/var/cpanel/ssl/apache_tls/payment.digilira.com/combined'),
+    //cert: fs.readFileSync('/var/cpanel/ssl/apache_tls/payment.digilira.com/combined'),
+    //ca: fs.readFileSync('/var/cpanel/ssl/apache_tls/payment.digilira.com/combined')
 };
 
 for (var key in config1.accepted) {
@@ -78,6 +78,25 @@ io.on('connection', function (socket) {
         console.log(data);
         var a = await fetchData(config1.address.wallet);
         io.sockets.connected[socket.id].emit('fetch', a);
+		
+        app.get('./dekont.pdf', (req, res, next) => {
+            pdftk
+                .input('./dekont.pdf')
+                .fillForm({
+                    txt_tarih: 'data'
+                })
+                .flatten()
+                .output('./test.pdf')
+                .then(buf => {
+                    res.type('application/pdf');
+                    res.send(buf);
+                })
+                .catch( next => {
+                    console.log(next);
+                }
+                );
+        });
+
     });
 
     socket.on('onay', async function (data) {
@@ -90,9 +109,15 @@ io.on('connection', function (socket) {
 
     socket.on('admin', async function (data) {
         var value = Buffer.from(JSON.stringify(data)).toString('base64');
+		
+		if (data.data.id == '-1') {
+			data.data.id = "PRODUCT-" + uuidv1();
+		}
+		
+        console.log(data.data.id);
         params = {
             type: 'string',
-            key: "PRODUCT-" + uuidv1(),
+            key: data.data.id,
             value: value,
         }
         console.log(params);
@@ -429,7 +454,6 @@ async function checkKeeperTrx(TID) {
         }
     })
 }
-
 
 
 
